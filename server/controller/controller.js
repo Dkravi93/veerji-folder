@@ -3,8 +3,8 @@ const getImages = require('../utils/uploadImage');
 const postIt = async (req,res) => {
     try {
         const path = req.file;
-        console.log(path);
-        const newImg =  await getImages(path);
+        // console.log('path',path);
+        const newImg =  await getImages(path.path);
     
         const image = await Images.create({
             image : newImg
