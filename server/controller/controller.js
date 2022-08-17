@@ -1,5 +1,5 @@
-const Images = require('./../model/imagemodel')
-const getImages = require('./../uploadImage');
+const Images = require('../model/imagemodel')
+const getImages = require('../utils/uploadImage');
 const postIt = async (req,res) => {
     try {
         const path = req.file;
