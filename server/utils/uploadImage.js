@@ -14,9 +14,9 @@ const getImage = async (path) => {
   await fileChooser.accept([path]);
   await page.waitForTimeout(45000);
   const images = await page.$eval(".rm-bg-result img", (node) => node.src);
+  await browser.close();
   return images;
 
-  await browser.close();
   //   console.log(page);
 };
 
